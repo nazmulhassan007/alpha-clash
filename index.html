@@ -1,4 +1,4 @@
-g<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,97 @@ g<!DOCTYPE html>
     <!-- Link to css file -->
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-    
+<body class="font-poppins">
+    <main class="min-h-screen  bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
+        <!-- home screen -->
+    <section id="home-screen" class="home text-white flex justify-center items-center min-h-screen ">
+    <div class="flex flex-col items-center gap-10">
+        <h1 class="text-8xl font-anton uppercase">ALPHABET CLASH</h1>
+        <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+        <button onclick="play()" class="btn bg-white text-black">Play Now</button>
+    </div>
+    </section>
+    <!-- play ground atart screen -->
+    <section id="play-ground" class="hidden">
+        <div class="flex flex-col items-center gap-18 pt-20">
+            <!-- screen -->
+             <div class="artboard artboard-horizontal phone-6 border-[20px] w-[1170px] h-[450px] rounded-2xl border-[#010313CC] bg-[#ffffffB3]">
+                <div class="flex justify-center">
+                    <p class="bg-[#2F2941]  px-8 pb-6 rounded-b-xl text-white">Don't watch keyboard  while playing...</p>
+                </div>
+               <div class="flex justify-center items-center h-full">
+                 <p id="current-alphabet" class="text-black text-9xl font-bold uppercase">Y</p>
+               </div>
+             </div>
+            <!-- keyboard start -->
+             <div>
+                <div class="my-1 flex w-full justify-center gap-2">
+            <kbd id="q" class="kbd text-[20px] font-semibold w-[50px] h-[50px]">q</kbd>
+            <kbd id="w" class="kbd text-[20px] font-semibold w-[50px] h-[50px]">w</kbd>
+            <kbd id="e" class="kbd text-[20px] font-semibold w-[50px] h-[50px]">e</kbd>
+            <kbd id="r" class="kbd text-[20px] font-semibold w-[50px] h-[50px]">r</kbd>
+            <kbd id="t" class="kbd text-[20px] font-semibold w-[50px] h-[50px]">t</kbd>
+            <kbd id="y" class="kbd text-[20px] font-semibold w-[50px] h-[50px]">y</kbd>
+            <kbd id="u" class="kbd text-[20px] font-semibold w-[50px] h-[50px]">u</kbd>
+            <kbd id="i" class="kbd text-[20px] font-semibold w-[50px] h-[50px]">i</kbd>
+            <kbd id="o" class="kbd text-[20px] font-semibold w-[50px] h-[50px]">o</kbd>
+            <kbd id="p" class="kbd text-[20px] font-semibold w-[50px] h-[50px]">p</kbd>
+            </div>
+            <div class="my-1 flex w-full justify-center gap-2">
+            <kbd id="a" class="kbd text-[20px]  font-semibold w-[50px] h-[50px]">a</kbd>
+            <kbd id="s" class="kbd text-[20px]  font-semibold w-[50px] h-[50px]">s</kbd>
+            <kbd id="d" class="kbd text-[20px]  font-semibold w-[50px] h-[50px]">d</kbd>
+            <kbd id="f" class="kbd text-[20px]  font-semibold w-[50px] h-[50px]">f</kbd>
+            <kbd id="g" class="kbd text-[20px]  font-semibold w-[50px] h-[50px]">g</kbd>
+            <kbd id="h" class="kbd text-[20px]  font-semibold w-[50px] h-[50px]">h</kbd>
+            <kbd id="j" class="kbd text-[20px]  font-semibold w-[50px] h-[50px]">j</kbd>
+            <kbd id="k" class="kbd text-[20px]  font-semibold w-[50px] h-[50px]">k</kbd>
+            <kbd id="l" class="kbd text-[20px]  font-semibold w-[50px] h-[50px]">l</kbd>
+            </div>
+            <div class="my-1 flex w-full justify-center gap-2">
+            <kbd id="z" class="kbd text-[20px]  font-semibold w-[50px] h-[50px]">z</kbd>
+            <kbd id="x" class="kbd text-[20px]  font-semibold w-[50px] h-[50px]">x</kbd>
+            <kbd id="c" class="kbd text-[20px]  font-semibold w-[50px] h-[50px]">c</kbd>
+            <kbd id="v" class="kbd text-[20px]  font-semibold w-[50px] h-[50px]">v</kbd>
+            <kbd id="b" class="kbd text-[20px]  font-semibold w-[50px] h-[50px]">b</kbd>
+            <kbd id="n" class="kbd text-[20px]  font-semibold w-[50px] h-[50px]">n</kbd>
+            <kbd id="m" class="kbd text-[20px]  font-semibold w-[50px] h-[50px]">m</kbd>
+            <kbd id="/" class="kbd text-[20px]  font-semibold w-[50px] h-[50px]">/</kbd>
+            </div> 
+             </div> 
+            <!-- keyboard end -->
+            <!-- life score -->
+             <div class="flex  justify-between w-1/3">
+            <button class="btn rounded-full bg-purple-300 text-white px-2">
+                Life
+                <img src="images/icon1.svg" alt="">
+                <span>1</span>
+            </button>
+            <button class="btn rounded-full bg-purple-700 text-white px-4 border-none">
+                Score
+                <img src="images/icon2.svg" alt="">
+                <span>1</span>
+            </button>
+         
+             </div>
+        </div>
+    </section>
+    <!-- score screen -->
+    <section class="score flex justify-center items-center min-h-screen hidden">
+        <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-lg">
+            <h1 class="text-8xl">
+                <span class="font-extrabold">Score:</span>
+                <span class="font-extrabold">14</span>
+            </h1>
+            <button class="btn">Play Again</button>
+            <p>Practice will make you Pro</p>
+        </div>
+    </section>
+    </main>
+
+
+    <!-- link to Javascript files -->
+     <script src="scripts/alpha-clash.js"></script>
+     <script src="scripts/utility.js"></script>
 </body>
 </html>
